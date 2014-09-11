@@ -1,0 +1,67 @@
+{
+	"require" : {
+		"illuminate/database" : "4.3.*@dev",
+		"illuminate/cache" : "4.3.*@dev",
+		"illuminate/encryption" : "4.3.*@dev",
+		"illuminate/events" : "4.3.*@dev",
+		"illuminate/filesystem" : "4.3.*@dev",
+		"illuminate/hashing" : "4.3.*@dev",
+		"illuminate/queue" : "4.3.*@dev",
+		"illuminate/redis" : "4.3.*@dev",
+		"illuminate/routing" : "4.3.*@dev",
+		"illuminate/session" : "4.3.*@dev",
+		"mpdf/mpdf" : "v6.0-beta",
+		"redbeanphp" : "4.0.*",
+		"fzaninotto/faker" : "1.5.*@dev",
+		"cboden/ratchet" : "dev-master",
+		"slim/slim": "*"
+	},
+	"repositories" : [{
+			"type" : "package",
+			"package" : {
+				"name" : "redbeanphp",
+				"version" : "4.0.9",
+				"dist" : {
+					"url" : "http://www.redbeanphp.com/downloadredbean.php",
+					"type" : "tar"
+				}
+			}
+		}, {
+			"type" : "package",
+			"package" : {
+				"name" : "php-websocket",
+				"version" : "master",
+				"source" : {
+					"url" : "https://github.com/lemmingzshadow/php-websocket.git",
+					"type" : "git",
+					"reference" : "master"
+				}
+			}
+		}
+	],
+	"require-dev" : {
+		"phpunit/phpunit" : "~4.0",
+		"squizlabs/php_codesniffer" : "~1.5"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"Faker" : "src/",
+			"Faker\\PHPUnit" : "test/"
+		},
+		"classmap" : [
+			"app/models",
+			"app/services",
+			"app/plugins"
+		],
+		"files" : [
+			"vendor/redbeanphp/rb.php"
+		]
+	},
+	"minimum-stability" : "dev",
+	"extra" : {
+		"branch-alias" : {
+			"dev-master" : "1.5.x-dev"
+		}
+	},
+	"license" : "MIT"
+}
