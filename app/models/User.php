@@ -12,7 +12,10 @@ class UserObserver {
 }
 
 class User extends Eloquent {
+
 	public $timestamps = false;
+	// protected $connection = 'test';
+	// protected $connection = 'sqlite';
 
 	public static function boot()   {
 		parent::boot();

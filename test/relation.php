@@ -8,7 +8,6 @@ require __DIR__.'/../app/config/database.php';
 
 // echo R::getVersion();
  
-
 // $addr =  Address::find(2);
 // $u = $addr->user()->get();
 // var_dump($addr->toArray());
@@ -21,6 +20,20 @@ require __DIR__.'/../app/config/database.php';
 // {
 //     var_dump($user);
 // }
+
+//Multi Database Used
+// $users = DB::connection('test')->table('users')->get();
+// $users = DB::connection('default')->table('users')->get();
+// $users = DB::connection('sqlite')->table('users')->get();
+// foreach ($users as $user)
+// {
+//     // var_dump($user);
+//     echo json_encode($user),'<br>';
+// }
+
+// $rs = User::on('sqlite')->get()->toArray();
+$rs = User::get()->toArray();
+var_dump($rs);
 
 
 // $user = DB::table('users')->where('name', 'Bob')->first();
@@ -48,6 +61,7 @@ require __DIR__.'/../app/config/database.php';
 // $query = DB::table('users')->select('name');
 // $users = $query->addSelect('name','id as idx')->get();
 // var_dump($users);
+
 
 // $users = DB::table('users')->where('id', '>', 1)->get();
 // var_dump($users);
