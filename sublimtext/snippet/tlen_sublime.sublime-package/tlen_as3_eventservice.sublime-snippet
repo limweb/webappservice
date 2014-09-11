@@ -1,0 +1,246 @@
+  <snippet>
+  <content><![CDATA[
+
+package ${1:services}
+{
+
+  import configs.MainConfig;
+  import mx.collections.ArrayCollection;
+  import mx.rpc.AsyncToken;
+  import mx.rpc.events.FaultEvent;
+  import mx.rpc.events.ResultEvent;
+  import mx.rpc.remoting.RemoteObject;
+
+
+  //${2:Classname}
+  public class ${2/^([a-z])/\U$1\E/}Event extends BaseEvent
+  {
+
+    private var service:RemoteObject;
+    private static var  _instance:${2/^([a-z])/\U$1\E/}Event =  new  ${2/^([a-z])/\U$1\E/}Event();
+
+    [Bindable] public var ac${2/^([a-z])/\U$1\E/}:ArrayCollection = new ArrayCollection();
+    [Bindable] public var vo${2/^([a-z])/\U$1\E/}:vo${2/^([a-z])/\U$1\E/} = new vo${2/^([a-z])/\U$1\E/}();
+    [Bindable] public var counts:int = -1;
+    
+    public function getAll${2/^([a-z])/\U$1\E/}(page:Object):AsyncToken { 
+      MainConfig.getInstance.showProgressBar();
+      var asyncToken:AsyncToken = service.getAll${2/^([a-z])/\U$1\E/}();
+      return getAsyncResponder(asyncToken, result_getAll${2/^([a-z])/\U$1\E/}, fault_getAll${2/^([a-z])/\U$1\E/},page);
+    }
+    
+    private function result_getAll${2/^([a-z])/\U$1\E/}(event:ResultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      ac${2/^([a-z])/\U$1\E/} = new ArrayCollection(event.result as Array);
+      if(token != null){
+        token.getAll${2/^([a-z])/\U$1\E/}_successed();
+      }
+    }
+    
+    private function fault_getAll${2/^([a-z])/\U$1\E/}(event:FaultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      if( Capabilities.version.substr(0,3) == 'IOS' || Capabilities.version.substr(0,3) == "AND" ){
+        trace('Mobile');
+        if(token != null){
+            token.getAll${2/^([a-z])/\U$1\E/}_falut();
+        }
+      } else {
+//        MessageAlert.getErrorAlert(ErrorMsg.getErrorMsg(event));
+      }
+      
+    }
+    
+    
+    public function get${2/^([a-z])/\U$1\E/}ByID(gid:int,page:Object):AsyncToken { 
+      MainConfig.getInstance.showProgressBar();
+      var asyncToken:AsyncToken = service.get${2/^([a-z])/\U$1\E/}ByID(gid);
+      return getAsyncResponder(asyncToken, result_get${2/^([a-z])/\U$1\E/}ByID, fault_get${2/^([a-z])/\U$1\E/}ByID,page);
+    }
+    
+    private function result_get${2/^([a-z])/\U$1\E/}ByID(event:ResultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      vo${2/^([a-z])/\U$1\E/} = event.result as vo${2/^([a-z])/\U$1\E/};
+      if(token != null){
+        token.get${2/^([a-z])/\U$1\E/}ByID_successed();
+      }
+    }
+    
+    private function fault_get${2/^([a-z])/\U$1\E/}ByID(event:FaultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      if( Capabilities.version.substr(0,3) == 'IOS' || Capabilities.version.substr(0,3) == "AND" ){
+        trace('Mobile');
+        if(token != null){
+          token.get${2/^([a-z])/\U$1\E/}ByID_falut();
+        }
+      } else {
+//        MessageAlert.getErrorAlert(ErrorMsg.getErrorMsg(event));
+      }
+      
+    }
+    
+    
+    public function update${2/^([a-z])/\U$1\E/}(item:vo${2/^([a-z])/\U$1\E/},page:Object):AsyncToken { 
+      MainConfig.getInstance.showProgressBar();
+      var asyncToken:AsyncToken = service.update${2/^([a-z])/\U$1\E/}(item);
+      return getAsyncResponder(asyncToken, result_update${2/^([a-z])/\U$1\E/}, fault_update${2/^([a-z])/\U$1\E/},page);
+    }
+    
+    private function result_update${2/^([a-z])/\U$1\E/}(event:ResultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      if(token != null){
+        token.update${2/^([a-z])/\U$1\E/}_successed();
+      }
+    }
+    
+    private function fault_update${2/^([a-z])/\U$1\E/}(event:FaultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      if( Capabilities.version.substr(0,3) == 'IOS' || Capabilities.version.substr(0,3) == "AND" ){
+        trace('Mobile');
+        if(token != null){
+          token.update${2/^([a-z])/\U$1\E/}_falut();
+        }
+      } else {
+//        MessageAlert.getErrorAlert(ErrorMsg.getErrorMsg(event));
+      }
+      
+    }
+    
+    
+    public function create${2/^([a-z])/\U$1\E/}(item:vo${2/^([a-z])/\U$1\E/},page:Object):AsyncToken { 
+      MainConfig.getInstance.showProgressBar();
+      var asyncToken:AsyncToken = service.create${2/^([a-z])/\U$1\E/}(item);
+      return getAsyncResponder(asyncToken, result_create${2/^([a-z])/\U$1\E/}, fault_create${2/^([a-z])/\U$1\E/},page);
+    }
+    
+    private function result_create${2/^([a-z])/\U$1\E/}(event:ResultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      if(token != null){
+        var gid:int = event.result as int;
+          token.create${2/^([a-z])/\U$1\E/}_successed(gid);
+      }
+    }
+    
+    private function fault_create${2/^([a-z])/\U$1\E/}(event:FaultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      if( Capabilities.version.substr(0,3) == 'IOS' || Capabilities.version.substr(0,3) == "AND" ){
+        trace('Mobile');
+        if(token != null){
+            token.create${2/^([a-z])/\U$1\E/}_falut();
+        }
+      } else {
+//        MessageAlert.getErrorAlert(ErrorMsg.getErrorMsg(event));
+      }
+      
+    }
+    
+    
+    public function delete${2/^([a-z])/\U$1\E/}(gid:int,page:Object):AsyncToken { 
+      MainConfig.getInstance.showProgressBar();
+      var asyncToken:AsyncToken = service.delete${2/^([a-z])/\U$1\E/}(gid);
+      return getAsyncResponder(asyncToken, result_delete${2/^([a-z])/\U$1\E/}, fault_delete${2/^([a-z])/\U$1\E/},page);
+    }
+    
+    private function result_delete${2/^([a-z])/\U$1\E/}(event:ResultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      if(token != null){
+          token.delete${2/^([a-z])/\U$1\E/}_successed();
+      }
+    }
+    
+    private function fault_delete${2/^([a-z])/\U$1\E/}(event:FaultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      if( Capabilities.version.substr(0,3) == 'IOS' || Capabilities.version.substr(0,3) == "AND" ){
+        trace('Mobile');
+        if(token != null){
+            token.delete${2/^([a-z])/\U$1\E/}_falut();
+        }
+      } else {
+//        MessageAlert.getErrorAlert(ErrorMsg.getErrorMsg(event));
+      }
+      
+    }
+    
+    
+    public function count(page:Object):AsyncToken { 
+      MainConfig.getInstance.showProgressBar();
+      var asyncToken:AsyncToken = service.count();
+      return getAsyncResponder(asyncToken, result_count, fault_count,page);
+    }
+    
+    private function result_count(event:ResultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      counts = event.result as int;
+      if(token != null){
+          token.count_successed();
+      }
+    }
+    
+    private function fault_count(event:FaultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      if( Capabilities.version.substr(0,3) == 'IOS' || Capabilities.version.substr(0,3) == "AND" ){
+        trace('Mobile');
+        if(token != null){
+            token.count_falut();
+        }
+      } else {
+//        MessageAlert.getErrorAlert(ErrorMsg.getErrorMsg(event));
+      }
+      
+    }
+    
+  
+    public function get${2/^([a-z])/\U$1\E/}_paged(startindex:int,numItems:int,page:Object):AsyncToken { 
+      MainConfig.getInstance.showProgressBar();
+      var asyncToken:AsyncToken = service.get${2/^([a-z])/\U$1\E/}_paged(startindex,numItems);
+      return getAsyncResponder(asyncToken, result_get${2/^([a-z])/\U$1\E/}_paged, fault_get${2/^([a-z])/\U$1\E/}_paged,page);
+    }
+    
+    private function result_get${2/^([a-z])/\U$1\E/}_paged(event:ResultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      ac${2/^([a-z])/\U$1\E/} = new ArrayCollection(event.result as Array);
+      if(token != null){
+          token.get${2/^([a-z])/\U$1\E/}_paged_successed();
+      }
+    }
+    
+    private function fault_get${2/^([a-z])/\U$1\E/}_paged(event:FaultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      if( Capabilities.version.substr(0,3) == 'IOS' || Capabilities.version.substr(0,3) == "AND" ){
+        trace('Mobile');
+        if(token != null){
+            token.get${2/^([a-z])/\U$1\E/}_paged_falut();
+        }
+      } else {
+          //MessageAlert.getErrorAlert(ErrorMsg.getErrorMsg(event));
+      }
+      
+    }
+    
+    public function ${2/^([a-z])/\U$1\E/}Event()
+    {
+      super();
+      if (_instance != null)
+      {
+        throw new Error("Singleton can only be accessed through Singleton.instance");
+      }
+      service = new RemoteObject();
+      service.destination='zendamf';
+      service.source='${2/^([a-z])/\U$1\E/}Service';
+      service.endpoint = getphpEnpoint();
+      //service.endpoint = 'http://localhost/gateway.php';
+    }
+
+    public static function get getInstance(): ${2/^([a-z])/\U$1\E/}Event {
+      return _instance;
+      
+    }
+  }
+}
+
+
+    ]]>
+  </content>
+     <tabTrigger>servas3</tabTrigger>
+     <description>Gen Services Class for As3</description> 
+     <scope>source.actionscript.3</scope>
+  </snippet>

@@ -1,0 +1,38 @@
+<snippet>
+<content>
+<![CDATA[
+
+    ${6://}public var ${4}:${5:ArrayCollection} = new ${5}();
+    public function ${1:functionname}(${2:value}:${3:Type},userid:String=null,page:Object=null):AsyncToken { 
+      MainConfig.getInstance.showProgressBar();
+      var asyncToken:AsyncToken = service.${1}(${2},userid);
+      return getAsyncResponder(asyncToken, result_${1}, fault_${1},page);
+    }
+    
+    private function result_${1}(e:ResultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      ${6://}${4:ac} = new ArrayCollection(e.result as Array);
+      if(token != null){
+        token.${1}uccessed();
+      }
+    }
+    
+    private function fault_${1}(e:FaultEvent, token:Object):void {
+      MainConfig.getInstance.hideProgressBar();
+      if( Capabilities.version.substr(0,3) == 'IOS' || Capabilities.version.substr(0,3) == "AND" ){
+        trace('Mobile');
+        if(token != null){
+          token.${1}_falut();
+        }
+      } else {
+        //MessageAlert.getErrorAlert(ErrorMsg.getErrorMsg(event));
+      }
+    }
+
+
+]]>
+</content>
+     <tabTrigger>funcas3</tabTrigger>
+     <description>Gen Function Services  for As3</description> 
+     <scope>source.actionscript.3</scope>
+</snippet>

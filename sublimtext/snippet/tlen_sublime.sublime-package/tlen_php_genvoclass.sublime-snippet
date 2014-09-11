@@ -1,0 +1,69 @@
+<snippet>
+<content><![CDATA[
+
+require_once 'rb.phar';
+
+\$path =  __DIR__;
+\$phpfile = '';
+\$asfile  = '';
+
+R::setup('mysql:host=localhost;port=3306;dbname=${1:dbname}','root','');
+\$table = '${2:table}';
+\$cols = R::inspect(\$table);
+
+\$phpfilename = \$path . '/${2}.php';
+
+echo '<?php ',"\r\n\r\n";
+\$phpfile .= '<?php '."\r\n\r\n";
+
+echo 'class  ${2/^([a-z])/\U$1\E/}   {',"\r\n";
+\$phpfile .= 'class  ${2/^([a-z])/\U$1\E/}   {'."\r\n";
+
+foreach (\$cols as \$key => \$value) {
+  echo "\t\t\t\t",'public \$'.\$key,";\r\n";
+  \$phpfile .= "\t".'public \$'.\$key.";\r\n";
+}
+
+ echo "   } \r\n\r\n ?>\r\n\r\n";
+ \$phpfile .= "   } \r\n\r\n ?>\r\n\r\n";
+ 
+file_put_contents(\$phpfilename, \$phpfile);
+\$asfilename = \$path . '/${2/^([a-z])/\U$1\E/}.as'; 
+
+ echo "package ${3:vo}\r\n";
+ \$asfile .=  "package ${3:vo}\r\n";
+ echo "{\r\n";
+ \$asfile .=   "{\r\n";
+ echo  '  [RemoteClass(alias="${2/^([a-z])/\U$1\E/}")]',"\r\n";
+ \$asfile .=    '  [RemoteClass(alias="${2/^([a-z])/\U$1\E/}")]'."\r\n";
+ echo "  [Bindable]\r\n";
+ \$asfile .=   "  [Bindable]\r\n";
+ echo "  public class ${4}${2/^([a-z])/\U$1\E/}${5}\r\n";
+ \$asfile .=   "  public class ${4}${2/^([a-z])/\U$1\E/}${5}\r\n";
+ echo "  {\r\n";
+ \$asfile .=   "  {\r\n";
+ foreach (\$cols as \$key => \$value) {
+  if (stripos(\$value, "int") !== false) {
+      echo "\t\t\t\t",'public var '.\$key.':int',";\r\n";
+      \$asfile .=   "\t".'public var '.\$key.':int'.";\r\n";
+  } else {
+      echo "\t\t\t\t",'public var '.\$key.':String',";\r\n";
+      \$asfile .=   "\t".'public var '.\$key.':String'.";\r\n";
+  } 
+ }
+ echo "     }\r\n";
+ \$asfile .=   "     }\r\n";
+ echo "}\r\n";
+ \$asfile .=   "}\r\n";
+ echo "\r\n";
+ \$asfile .=   "\r\n";
+
+ file_put_contents(\$asfilename, \$asfile);
+
+${6}
+]]>
+</content>
+     <tabTrigger>genvo</tabTrigger>
+     <description>Gen Vo Calss for Php and FLex</description> 
+     <scope>source.php</scope>
+</snippet>

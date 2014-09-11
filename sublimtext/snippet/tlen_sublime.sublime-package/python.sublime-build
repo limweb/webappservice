@@ -1,0 +1,19 @@
+// # Hide the console window on Windows
+// startupinfo = None
+// if os.name == "nt":
+//     startupinfo = subprocess.STARTUPINFO()
+//     startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+
+{
+"cmd": ["start", "cmd", "/k", "c:/python27/python.exe", "$file"],
+    "selector": "source.python",
+    "shell":true,
+    "working_dir": "$file_dir"
+}
+
+
+// {
+//     "cmd": ["C:\\python27\\python.exe", "-u", "$file"],
+//     "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+//     "selector": "source.python"
+// }
