@@ -1,0 +1,35 @@
+{
+    "name": "illuminate/database",
+    "license": "MIT",
+    "keywords": ["laravel", "database", "sql", "orm"],
+    "authors": [
+        {
+            "name": "Taylor Otwell",
+            "email": "taylorotwell@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/container": "4.3.*",
+        "illuminate/contracts": "4.3.*",
+        "illuminate/support": "4.3.*",
+        "nesbot/carbon": "~1.0"
+    },
+    "require-dev": {
+        "illuminate/console": "4.3.*",
+        "illuminate/filesystem": "4.3.*",
+        "illuminate/pagination": "4.3.*",
+        "illuminate/support": "4.3.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Illuminate\\Database\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.3-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
