@@ -9,12 +9,18 @@ date_default_timezone_set ( 'Asia/Bangkok' );
 // for Sqlite db
 // R::setup('sqlite:dbfile.db');
 // R::nuke();
-class DB extends Illuminate\Database\Capsule\Manager {
-}
-; // DB::table('users') = DB::table('users')
-class Eloquent extends Illuminate\Database\Eloquent\Model {
-}
-;
+// print_r(get_declared_classes());
+// exit();
+class DB extends Illuminate\Database\Capsule\Manager { }; // DB::table('users') = DB::table('users')
+class Eloquent extends Illuminate\Database\Eloquent\Model {};
+// use Illuminate\Queue\Capsule\Manager as Queue;
+// $queue = new Queue();
+// $queue->addConnection([
+//     'driver' => 'beanstalkd',
+//     'host' => 'localhost',
+//     'queue' => 'default',
+// ]);
+// $queue->setAsGlobal();
 
 $faker = Faker\Factory::create ();
 class PostObserver {

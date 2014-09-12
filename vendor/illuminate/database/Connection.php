@@ -3,6 +3,7 @@
 use PDO;
 use Closure;
 use DateTime;
+use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Database\Query\Processors\Processor;
 use Doctrine\DBAL\Connection as DoctrineConnection;
 
@@ -273,21 +274,45 @@ class Connection implements ConnectionInterface {
 	 * @param  array   $bindings
 	 * @return array
 	 */
-	public function select($query, $bindings = array())
+	public function selectFromWriteConnection($query, $bindings = array())
 	{
-		return $this->run($query, $bindings, function($me, $query, $bindings)
+		return $this->select($query, $bindings, false);
+	}
+
+	/**
+	 * Run a select statement against the database.
+	 *
+	 * @param  string  $query
+	 * @param  array  $bindings
+	 * @param  bool  $useReadPdo
+	 * @return array
+	 */
+	public function select($query, $bindings = array(), $useReadPdo = true)
+	{
+		return $this->run($query, $bindings, function($me, $query, $bindings) use ($useReadPdo)
 		{
 			if ($me->pretending()) return array();
 
 			// For select statements, we'll simply execute the query and return an array
 			// of the database result set. Each element in the array will be a single
 			// row from the database table, and will either be an array or objects.
-			$statement = $me->getReadPdo()->prepare($query);
+			$statement = $this->getPdoForSelect($useReadPdo)->prepare($query);
 
 			$statement->execute($me->prepareBindings($bindings));
 
 			return $statement->fetchAll($me->getFetchMode());
 		});
+	}
+
+	/**
+	 * Get the PDO connection to use for a select query.
+	 *
+	 * @param  bool  $useReadPdo
+	 * @return \PDO
+	 */
+	protected function getPdoForSelect($useReadPdo = true)
+	{
+		return $useReadPdo ? $this->getReadPdo() : $this->getPdo();
 	}
 
 	/**
@@ -947,7 +972,7 @@ class Connection implements ConnectionInterface {
 	 * @param  \Illuminate\Contracts\Events\Dispatcher
 	 * @return void
 	 */
-	public function setEventDispatcher(\Illuminate\Contracts\Events\Dispatcher $events)
+	public function setEventDispatcher(Dispatcher $events)
 	{
 		$this->events = $events;
 	}

@@ -60,6 +60,13 @@ class Container implements ArrayAccess, ContainerContract {
 	protected $globalResolvingCallbacks = array();
 
 	/**
+	 * All of the global after resolving callbacks.
+	 *
+	 * @var array
+	 */
+	protected $globalAfterResolvingCallbacks = array();
+
+	/**
 	 * Determine if a given string is resolvable.
 	 *
 	 * @param  string  $abstract
@@ -426,8 +433,13 @@ class Container implements ArrayAccess, ContainerContract {
 	 * @param  array  $parameters
 	 * @return mixed
 	 */
-	public function call($callback, array $parameters = array())
+	public function call($callback, array $parameters = array(), $defaultMethod = null)
 	{
+		if (is_string($callback))
+		{
+			return $this->callClass($callback, $parameters, $defaultMethod);
+		}
+
 		$dependencies = [];
 
 		foreach ($this->getCallReflector($callback)->getParameters() as $key => $parameter)
@@ -477,6 +489,36 @@ class Container implements ArrayAccess, ContainerContract {
 		{
 			return $parameter->getDefaultValue();
 		}
+	}
+
+	/**
+	 * Call a string reference to a class using Class@method syntax.
+	 *
+	 * @param  string  $target
+	 * @param  array  $parameters
+	 * @param  string|null  $defaultMethod
+	 * @return mixed
+	 */
+	protected function callClass($target, array $parameters = array(), $defaultMethod = null)
+	{
+		// If the listener has an @ sign, we will assume it is being used to delimit
+		// the class name from the handle method name. This allows for handlers
+		// to run multiple handler methods in a single class for convenience.
+		$segments = explode('@', $target);
+
+		$method = count($segments) == 2 ? $segments[1] : $defaultMethod;
+
+		if (is_null($method))
+		{
+			throw new \InvalidArgumentException("Method not provided.");
+		}
+
+		// We will make a callable of the listener instance and a method that should
+		// be called on that instance, then we will pass in the arguments that we
+		// received in this method into this listener class instance's methods.
+		$callable = array($this->make($segments[0]), $method);
+
+		return call_user_func_array($callable, $parameters);
 	}
 
 	/**
@@ -755,6 +797,17 @@ class Container implements ArrayAccess, ContainerContract {
 	}
 
 	/**
+	 * Register a new after resolving callback for all types.
+	 *
+	 * @param  \Closure  $callback
+	 * @return void
+	 */
+	public function afterResolvingAny(Closure $callback)
+	{
+		$this->globalAfterResolvingCallbacks[] = $callback;
+	}
+
+	/**
 	 * Fire all of the resolving callbacks.
 	 *
 	 * @param  string  $abstract
@@ -769,6 +822,8 @@ class Container implements ArrayAccess, ContainerContract {
 		}
 
 		$this->fireCallbackArray($object, $this->globalResolvingCallbacks);
+
+		$this->fireCallbackArray($object, $this->globalAfterResolvingCallbacks);
 	}
 
 	/**

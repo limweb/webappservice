@@ -42,17 +42,17 @@ Once the Capsule instance has been registered. You may use it like so:
 **Using The Query Builder**
 
 ```PHP
-$users = DB::table('users')->where('votes', '>', 100)->get();
+$users = Capsule::table('users')->where('votes', '>', 100)->get();
 ```
 Other core methods may be accessed directly from the Capsule in the same manner as from the DB facade:
 ```PHP
-$results = DB::select('select * from users where id = ?', array(1));
+$results = Capsule::select('select * from users where id = ?', array(1));
 ```
 
 **Using The Schema Builder**
 
 ```PHP
-DB::schema()->create('users', function($table)
+Capsule::schema()->create('users', function($table)
 {
 	$table->increments('id');
 	$table->string('email')->unique();

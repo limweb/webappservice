@@ -1285,6 +1285,42 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, UrlRoutable, J
 	}
 
 	/**
+	 * Set the observable event names.
+	 *
+	 * @return void
+	 */
+	public function setObservableEvents(array $observables)
+	{
+		$this->observables = $observables;
+	}
+
+	/**
+	 * Add an observable event name.
+	 *
+	 * @param  mixed  $observables
+	 * @return void
+	 */
+	public function addObservableEvents($observables)
+	{
+		$observables = is_array($observables) ? $observables : func_get_args();
+
+		$this->observables = array_unique(array_merge($this->observables, $observables));
+	}
+
+	/**
+	 * Remove an observable event name.
+	 *
+	 * @param  mixed  $observables
+	 * @return void
+	 */
+	public function removeObservableEvents($observables)
+	{
+		$observables = is_array($observables) ? $observables : func_get_args();
+
+		$this->observables = array_diff($this->observables, $observables);
+	}
+
+	/**
 	 * Increment a column's value by a given amount.
 	 *
 	 * @param  string  $column
@@ -1577,7 +1613,6 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, UrlRoutable, J
 	 */
 	protected function fireModelEvent($event, $halt = true)
 	{
-// 		isset(static::$dispatcher)
 		if ( ! isset(static::$dispatcher)) return true;
 
 		// We will append the names of the class to the event to distinguish it from
@@ -1879,6 +1914,16 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, UrlRoutable, J
 	public function getKeyName()
 	{
 		return $this->primaryKey;
+	}
+
+	/**
+	 * Set the primary key for the model.
+	 *
+	 * @return void
+	 */
+	public function setKeyName($key)
+	{
+		$this->primaryKey = $key;
 	}
 
 	/**

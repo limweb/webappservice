@@ -6,12 +6,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/support.git",
-            "reference": "4b69fb5c14fb433e4ae8bbf71c52c73840623223"
+            "reference": "a9c32c0742a5ff3feb92fc555ab678462d6ddd62"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/support/zipball/4b69fb5c14fb433e4ae8bbf71c52c73840623223",
-            "reference": "4b69fb5c14fb433e4ae8bbf71c52c73840623223",
+            "url": "https://api.github.com/repos/illuminate/support/zipball/a9c32c0742a5ff3feb92fc555ab678462d6ddd62",
+            "reference": "a9c32c0742a5ff3feb92fc555ab678462d6ddd62",
             "shasum": ""
         },
         "require": {
@@ -22,7 +22,7 @@
             "jeremeamia/superclosure": "~1.0",
             "patchwork/utf8": "~1.1"
         },
-        "time": "2014-09-09 01:28:25",
+        "time": "2014-09-11 01:19:22",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -56,19 +56,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/container.git",
-            "reference": "f0853a7bec2b1598fae7970c15522adc60f8cbd8"
+            "reference": "2d2567e431dcabeba2d386fb3f68d91f92e0d257"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/container/zipball/f0853a7bec2b1598fae7970c15522adc60f8cbd8",
-            "reference": "f0853a7bec2b1598fae7970c15522adc60f8cbd8",
+            "url": "https://api.github.com/repos/illuminate/container/zipball/2d2567e431dcabeba2d386fb3f68d91f92e0d257",
+            "reference": "2d2567e431dcabeba2d386fb3f68d91f92e0d257",
             "shasum": ""
         },
         "require": {
             "illuminate/contracts": "4.3.*",
             "php": ">=5.4.0"
         },
-        "time": "2014-09-08 16:48:33",
+        "time": "2014-09-09 22:02:17",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -99,12 +99,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/database.git",
-            "reference": "32f022fd0c63ae753eb55edfacf375cb0822dba9"
+            "reference": "ad5a803d97b92593b36891ea0ae117974d59fe63"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/database/zipball/32f022fd0c63ae753eb55edfacf375cb0822dba9",
-            "reference": "32f022fd0c63ae753eb55edfacf375cb0822dba9",
+            "url": "https://api.github.com/repos/illuminate/database/zipball/ad5a803d97b92593b36891ea0ae117974d59fe63",
+            "reference": "ad5a803d97b92593b36891ea0ae117974d59fe63",
             "shasum": ""
         },
         "require": {
@@ -120,7 +120,7 @@
             "illuminate/pagination": "4.3.*",
             "illuminate/support": "4.3.*"
         },
-        "time": "2014-09-08 22:05:21",
+        "time": "2014-09-11 01:19:22",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -157,12 +157,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/cache.git",
-            "reference": "8f3dbe255167df9150e5fe64d05f8b0d22e24bac"
+            "reference": "ef37744d735b697abed4512730b102b628879409"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/cache/zipball/8f3dbe255167df9150e5fe64d05f8b0d22e24bac",
-            "reference": "8f3dbe255167df9150e5fe64d05f8b0d22e24bac",
+            "url": "https://api.github.com/repos/illuminate/cache/zipball/ef37744d735b697abed4512730b102b628879409",
+            "reference": "ef37744d735b697abed4512730b102b628879409",
             "shasum": ""
         },
         "require": {
@@ -176,7 +176,7 @@
             "illuminate/filesystem": "4.3.*",
             "illuminate/redis": "4.3.*"
         },
-        "time": "2014-09-08 18:20:35",
+        "time": "2014-09-10 16:30:16",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -361,12 +361,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/thephpleague/flysystem.git",
-            "reference": "b5f8ed48e59010e906e6ccebf1ffb80f0c3c0f7c"
+            "reference": "d63e897b8859d7da2e5d8f0350b3952e3605b0a2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/b5f8ed48e59010e906e6ccebf1ffb80f0c3c0f7c",
-            "reference": "b5f8ed48e59010e906e6ccebf1ffb80f0c3c0f7c",
+            "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/d63e897b8859d7da2e5d8f0350b3952e3605b0a2",
+            "reference": "d63e897b8859d7da2e5d8f0350b3952e3605b0a2",
             "shasum": ""
         },
         "require": {
@@ -398,7 +398,7 @@
             "rackspace/php-opencloud": "Allows you to use Rackspace Cloud Files",
             "sabre/dav": "Enables WebDav support"
         },
-        "time": "2014-09-08 15:13:18",
+        "time": "2014-09-11 10:19:55",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -965,12 +965,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/session.git",
-            "reference": "a61906b561543dc80a5752f06fac82aef4148f6f"
+            "reference": "7444dc209236dd8212ccfd2335534fc71b5a0188"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/session/zipball/a61906b561543dc80a5752f06fac82aef4148f6f",
-            "reference": "a61906b561543dc80a5752f06fac82aef4148f6f",
+            "url": "https://api.github.com/repos/illuminate/session/zipball/7444dc209236dd8212ccfd2335534fc71b5a0188",
+            "reference": "7444dc209236dd8212ccfd2335534fc71b5a0188",
             "shasum": ""
         },
         "require": {
@@ -984,7 +984,7 @@
         "require-dev": {
             "illuminate/console": "4.3.*"
         },
-        "time": "2014-09-08 21:12:48",
+        "time": "2014-09-10 16:51:09",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1015,12 +1015,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/http.git",
-            "reference": "82e23c08ed8f47079b0b55f1f784f27b62cb7d0d"
+            "reference": "d0645db2d6c8e94f43d4a7ba9b3a52d635229b51"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/http/zipball/82e23c08ed8f47079b0b55f1f784f27b62cb7d0d",
-            "reference": "82e23c08ed8f47079b0b55f1f784f27b62cb7d0d",
+            "url": "https://api.github.com/repos/illuminate/http/zipball/d0645db2d6c8e94f43d4a7ba9b3a52d635229b51",
+            "reference": "d0645db2d6c8e94f43d4a7ba9b3a52d635229b51",
             "shasum": ""
         },
         "require": {
@@ -1030,7 +1030,7 @@
             "symfony/http-foundation": "2.6.*",
             "symfony/http-kernel": "2.6.*"
         },
-        "time": "2014-09-09 01:50:23",
+        "time": "2014-09-10 15:41:53",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1163,12 +1163,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/queue.git",
-            "reference": "9ceb6f5df56f4dff7d68114ceec6c0485608a273"
+            "reference": "e733ba251cfc031f4f0e9560c572aca728414d53"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/queue/zipball/9ceb6f5df56f4dff7d68114ceec6c0485608a273",
-            "reference": "9ceb6f5df56f4dff7d68114ceec6c0485608a273",
+            "url": "https://api.github.com/repos/illuminate/queue/zipball/e733ba251cfc031f4f0e9560c572aca728414d53",
+            "reference": "e733ba251cfc031f4f0e9560c572aca728414d53",
             "shasum": ""
         },
         "require": {
@@ -1189,7 +1189,7 @@
         "suggest": {
             "illuminate/redis": "Allows use of the Redis queue driver."
         },
-        "time": "2014-09-08 14:28:47",
+        "time": "2014-09-10 20:38:28",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1393,12 +1393,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/routing.git",
-            "reference": "779ceb50a96dc8cb2a899eea28ffe1d1b3440d5e"
+            "reference": "40fa6fbdad6c679e999c1ff7173645c7ba7bcf1e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/routing/zipball/779ceb50a96dc8cb2a899eea28ffe1d1b3440d5e",
-            "reference": "779ceb50a96dc8cb2a899eea28ffe1d1b3440d5e",
+            "url": "https://api.github.com/repos/illuminate/routing/zipball/40fa6fbdad6c679e999c1ff7173645c7ba7bcf1e",
+            "reference": "40fa6fbdad6c679e999c1ff7173645c7ba7bcf1e",
             "shasum": ""
         },
         "require": {
@@ -1416,7 +1416,7 @@
             "illuminate/console": "4.3.*",
             "illuminate/filesystem": "4.3.*"
         },
-        "time": "2014-09-08 19:22:50",
+        "time": "2014-09-10 19:28:02",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1505,12 +1505,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/exporter.git",
-            "reference": "8ab105f1fbf947408f69f476aba8ce8180503968"
+            "reference": "c7d59948d6e82818e1bdff7cadb6c34710eb7dc0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/8ab105f1fbf947408f69f476aba8ce8180503968",
-            "reference": "8ab105f1fbf947408f69f476aba8ce8180503968",
+            "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/c7d59948d6e82818e1bdff7cadb6c34710eb7dc0",
+            "reference": "c7d59948d6e82818e1bdff7cadb6c34710eb7dc0",
             "shasum": ""
         },
         "require": {
@@ -1519,7 +1519,7 @@
         "require-dev": {
             "phpunit/phpunit": "~4.0"
         },
-        "time": "2014-08-13 23:54:49",
+        "time": "2014-09-10 00:51:36",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1795,12 +1795,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-            "reference": "fd3ccb21dbc1e5e89e33075afbc7e929aabc639a"
+            "reference": "3d40ae857a3941ede714be45079e85f9e956b4b3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/fd3ccb21dbc1e5e89e33075afbc7e929aabc639a",
-            "reference": "fd3ccb21dbc1e5e89e33075afbc7e929aabc639a",
+            "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/3d40ae857a3941ede714be45079e85f9e956b4b3",
+            "reference": "3d40ae857a3941ede714be45079e85f9e956b4b3",
             "shasum": ""
         },
         "require": {
@@ -1814,7 +1814,7 @@
         "suggest": {
             "ext-soap": "*"
         },
-        "time": "2014-09-06 17:39:17",
+        "time": "2014-09-10 14:10:18",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2395,212 +2395,6 @@
         ]
     },
     {
-        "name": "guzzle/common",
-        "version": "v3.9.2",
-        "version_normalized": "3.9.2.0",
-        "target-dir": "Guzzle/Common",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/guzzle/common.git",
-            "reference": "2e36af7cf2ce3ea1f2d7c2831843b883a8e7b7dc"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/common/zipball/2e36af7cf2ce3ea1f2d7c2831843b883a8e7b7dc",
-            "reference": "2e36af7cf2ce3ea1f2d7c2831843b883a8e7b7dc",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.2",
-            "symfony/event-dispatcher": ">=2.1"
-        },
-        "time": "2014-08-11 04:32:36",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.7-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Guzzle\\Common": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Common libraries used by Guzzle",
-        "homepage": "http://guzzlephp.org/",
-        "keywords": [
-            "collection",
-            "common",
-            "event",
-            "exception"
-        ]
-    },
-    {
-        "name": "guzzle/stream",
-        "version": "v3.9.2",
-        "version_normalized": "3.9.2.0",
-        "target-dir": "Guzzle/Stream",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/guzzle/stream.git",
-            "reference": "60c7fed02e98d2c518dae8f97874c8f4622100f0"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/stream/zipball/60c7fed02e98d2c518dae8f97874c8f4622100f0",
-            "reference": "60c7fed02e98d2c518dae8f97874c8f4622100f0",
-            "shasum": ""
-        },
-        "require": {
-            "guzzle/common": "self.version",
-            "php": ">=5.3.2"
-        },
-        "suggest": {
-            "guzzle/http": "To convert Guzzle request objects to PHP streams"
-        },
-        "time": "2014-05-01 21:36:02",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.7-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Guzzle\\Stream": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Michael Dowling",
-                "email": "mtdowling@gmail.com",
-                "homepage": "https://github.com/mtdowling"
-            }
-        ],
-        "description": "Guzzle stream wrapper component",
-        "homepage": "http://guzzlephp.org/",
-        "keywords": [
-            "Guzzle",
-            "component",
-            "stream"
-        ]
-    },
-    {
-        "name": "guzzle/parser",
-        "version": "v3.9.2",
-        "version_normalized": "3.9.2.0",
-        "target-dir": "Guzzle/Parser",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/guzzle/parser.git",
-            "reference": "6874d171318a8e93eb6d224cf85e4678490b625c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/parser/zipball/6874d171318a8e93eb6d224cf85e4678490b625c",
-            "reference": "6874d171318a8e93eb6d224cf85e4678490b625c",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.2"
-        },
-        "time": "2014-02-05 18:29:46",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.7-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Guzzle\\Parser": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Interchangeable parsers used by Guzzle",
-        "homepage": "http://guzzlephp.org/",
-        "keywords": [
-            "URI Template",
-            "cookie",
-            "http",
-            "message",
-            "url"
-        ]
-    },
-    {
-        "name": "guzzle/http",
-        "version": "v3.9.2",
-        "version_normalized": "3.9.2.0",
-        "target-dir": "Guzzle/Http",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/guzzle/http.git",
-            "reference": "1e8dd1e2ba9dc42332396f39fbfab950b2301dc5"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/http/zipball/1e8dd1e2ba9dc42332396f39fbfab950b2301dc5",
-            "reference": "1e8dd1e2ba9dc42332396f39fbfab950b2301dc5",
-            "shasum": ""
-        },
-        "require": {
-            "guzzle/common": "self.version",
-            "guzzle/parser": "self.version",
-            "guzzle/stream": "self.version",
-            "php": ">=5.3.2"
-        },
-        "suggest": {
-            "ext-curl": "*"
-        },
-        "time": "2014-08-11 04:32:36",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.7-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Guzzle\\Http": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Michael Dowling",
-                "email": "mtdowling@gmail.com",
-                "homepage": "https://github.com/mtdowling"
-            }
-        ],
-        "description": "HTTP libraries used by Guzzle",
-        "homepage": "http://guzzlephp.org/",
-        "keywords": [
-            "Guzzle",
-            "client",
-            "curl",
-            "http",
-            "http client"
-        ]
-    },
-    {
         "name": "evenement/evenement",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -2787,118 +2581,24 @@
         ]
     },
     {
-        "name": "nesbot/carbon",
-        "version": "1.11.0",
-        "version_normalized": "1.11.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/briannesbitt/Carbon.git",
-            "reference": "2b60366be6dcb9f9cd3e244ab25eb98eaea99551"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/2b60366be6dcb9f9cd3e244ab25eb98eaea99551",
-            "reference": "2b60366be6dcb9f9cd3e244ab25eb98eaea99551",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~4.0"
-        },
-        "time": "2014-08-26 03:18:44",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Carbon": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Brian Nesbitt",
-                "email": "brian@nesbot.com",
-                "homepage": "http://nesbot.com"
-            }
-        ],
-        "description": "A simple API extension for DateTime.",
-        "homepage": "https://github.com/briannesbitt/Carbon",
-        "keywords": [
-            "date",
-            "datetime",
-            "time"
-        ]
-    },
-    {
-        "name": "react/stream",
-        "version": "v0.4.1",
-        "version_normalized": "0.4.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/reactphp/stream.git",
-            "reference": "9db28e85a6fe7b57fad5e8c036f3434bcb8c8f60"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/reactphp/stream/zipball/9db28e85a6fe7b57fad5e8c036f3434bcb8c8f60",
-            "reference": "9db28e85a6fe7b57fad5e8c036f3434bcb8c8f60",
-            "shasum": ""
-        },
-        "require": {
-            "evenement/evenement": "~2.0",
-            "php": ">=5.4.0"
-        },
-        "suggest": {
-            "react/event-loop": "0.4.*",
-            "react/promise": "~2.0"
-        },
-        "time": "2014-03-30 17:19:02",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "0.4-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "React\\Stream\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Basic readable and writable stream interfaces that support piping.",
-        "keywords": [
-            "pipe",
-            "stream"
-        ]
-    },
-    {
         "name": "illuminate/contracts",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/contracts.git",
-            "reference": "4b9d84f7297646eb9b0dcbaae8e5728f250d621c"
+            "reference": "6d751a0cfcd75d4bd79a07ae62e97af3bd428660"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/contracts/zipball/4b9d84f7297646eb9b0dcbaae8e5728f250d621c",
-            "reference": "4b9d84f7297646eb9b0dcbaae8e5728f250d621c",
+            "url": "https://api.github.com/repos/illuminate/contracts/zipball/6d751a0cfcd75d4bd79a07ae62e97af3bd428660",
+            "reference": "6d751a0cfcd75d4bd79a07ae62e97af3bd428660",
             "shasum": ""
         },
         "require": {
             "php": ">=5.4.0"
         },
-        "time": "2014-09-08 22:05:21",
+        "time": "2014-09-09 22:11:15",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2968,6 +2668,409 @@
             "microframework",
             "rest",
             "router"
+        ]
+    },
+    {
+        "name": "nesbot/carbon",
+        "version": "1.12.0",
+        "version_normalized": "1.12.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/briannesbitt/Carbon.git",
+            "reference": "cde7a00d1410a17fb6d61b993cb017a78be1137c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/cde7a00d1410a17fb6d61b993cb017a78be1137c",
+            "reference": "cde7a00d1410a17fb6d61b993cb017a78be1137c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2014-09-10 03:26:33",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Carbon": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Brian Nesbitt",
+                "email": "brian@nesbot.com",
+                "homepage": "http://nesbot.com"
+            }
+        ],
+        "description": "A simple API extension for DateTime.",
+        "homepage": "https://github.com/briannesbitt/Carbon",
+        "keywords": [
+            "date",
+            "datetime",
+            "time"
+        ]
+    },
+    {
+        "name": "react/stream",
+        "version": "v0.4.2",
+        "version_normalized": "0.4.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/reactphp/stream.git",
+            "reference": "acc7a5fec02e0aea674560e1d13c40ed0c8c5465"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/reactphp/stream/zipball/acc7a5fec02e0aea674560e1d13c40ed0c8c5465",
+            "reference": "acc7a5fec02e0aea674560e1d13c40ed0c8c5465",
+            "shasum": ""
+        },
+        "require": {
+            "evenement/evenement": "~2.0",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "react/event-loop": "0.4.*",
+            "react/promise": "~2.0"
+        },
+        "suggest": {
+            "react/event-loop": "0.4.*",
+            "react/promise": "~2.0"
+        },
+        "time": "2014-09-10 03:32:31",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.5-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "React\\Stream\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Basic readable and writable stream interfaces that support piping.",
+        "keywords": [
+            "pipe",
+            "stream"
+        ]
+    },
+    {
+        "name": "pda/pheanstalk",
+        "version": "v2.1.0",
+        "version_normalized": "2.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/pda/pheanstalk.git",
+            "reference": "ab006cf9330fb5d3799f30a5d9841b85edb40a0f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/pda/pheanstalk/zipball/ab006cf9330fb5d3799f30a5d9841b85edb40a0f",
+            "reference": "ab006cf9330fb5d3799f30a5d9841b85edb40a0f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2013-04-03 09:15:34",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Pheanstalk": "classes/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Paul Annesley",
+                "email": "paul@annesley.cc",
+                "homepage": "http://paul.annesley.cc/",
+                "role": "Developer"
+            }
+        ],
+        "description": "PHP client for beanstalkd queue",
+        "homepage": "https://github.com/pda/pheanstalk",
+        "keywords": [
+            "beanstalkd"
+        ]
+    },
+    {
+        "name": "guzzle/guzzle",
+        "version": "v3.9.2",
+        "version_normalized": "3.9.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/guzzle3.git",
+            "reference": "54991459675c1a2924122afbb0e5609ade581155"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/54991459675c1a2924122afbb0e5609ade581155",
+            "reference": "54991459675c1a2924122afbb0e5609ade581155",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.3.3",
+            "symfony/event-dispatcher": "~2.1"
+        },
+        "replace": {
+            "guzzle/batch": "self.version",
+            "guzzle/cache": "self.version",
+            "guzzle/common": "self.version",
+            "guzzle/http": "self.version",
+            "guzzle/inflection": "self.version",
+            "guzzle/iterator": "self.version",
+            "guzzle/log": "self.version",
+            "guzzle/parser": "self.version",
+            "guzzle/plugin": "self.version",
+            "guzzle/plugin-async": "self.version",
+            "guzzle/plugin-backoff": "self.version",
+            "guzzle/plugin-cache": "self.version",
+            "guzzle/plugin-cookie": "self.version",
+            "guzzle/plugin-curlauth": "self.version",
+            "guzzle/plugin-error-response": "self.version",
+            "guzzle/plugin-history": "self.version",
+            "guzzle/plugin-log": "self.version",
+            "guzzle/plugin-md5": "self.version",
+            "guzzle/plugin-mock": "self.version",
+            "guzzle/plugin-oauth": "self.version",
+            "guzzle/service": "self.version",
+            "guzzle/stream": "self.version"
+        },
+        "require-dev": {
+            "doctrine/cache": "~1.3",
+            "monolog/monolog": "~1.0",
+            "phpunit/phpunit": "3.7.*",
+            "psr/log": "~1.0",
+            "symfony/class-loader": "~2.1",
+            "zendframework/zend-cache": "2.*,<2.3",
+            "zendframework/zend-log": "2.*,<2.3"
+        },
+        "time": "2014-08-11 04:32:36",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.9-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Guzzle": "src/",
+                "Guzzle\\Tests": "tests/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            },
+            {
+                "name": "Guzzle Community",
+                "homepage": "https://github.com/guzzle/guzzle/contributors"
+            }
+        ],
+        "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+        "homepage": "http://guzzlephp.org/",
+        "keywords": [
+            "client",
+            "curl",
+            "framework",
+            "http",
+            "http client",
+            "rest",
+            "web service"
+        ]
+    },
+    {
+        "name": "aws/aws-sdk-php",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/aws/aws-sdk-php.git",
+            "reference": "36434f2cd96ea78844478d897fb568a1866bce5a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/36434f2cd96ea78844478d897fb568a1866bce5a",
+            "reference": "36434f2cd96ea78844478d897fb568a1866bce5a",
+            "shasum": ""
+        },
+        "require": {
+            "guzzle/guzzle": ">=3.7.0,<=3.9.9",
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "doctrine/cache": "~1.0",
+            "ext-openssl": "*",
+            "monolog/monolog": "1.4.*",
+            "phpunit/phpunit": "4.*",
+            "symfony/yaml": "2.*"
+        },
+        "suggest": {
+            "doctrine/cache": "Adds support for caching of credentials and responses",
+            "ext-apc": "Allows service description opcode caching, request and response caching, and credentials caching",
+            "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
+            "monolog/monolog": "Adds support for logging HTTP requests and responses",
+            "symfony/yaml": "Eases the ability to write manifests for creating jobs in AWS Import/Export"
+        },
+        "time": "2014-09-11 22:10:11",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.6.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Aws": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Amazon Web Services",
+                "homepage": "http://aws.amazon.com"
+            }
+        ],
+        "description": "AWS SDK for PHP - Use Amazon Web Services in your PHP project",
+        "homepage": "http://aws.amazon.com/sdkforphp",
+        "keywords": [
+            "amazon",
+            "aws",
+            "cloud",
+            "dynamodb",
+            "ec2",
+            "glacier",
+            "s3",
+            "sdk"
+        ]
+    },
+    {
+        "name": "iron-io/iron_core",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/iron-io/iron_core_php.git",
+            "reference": "56ee81e44600ca4d7cc883d2a5035a65207129ee"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/iron-io/iron_core_php/zipball/56ee81e44600ca4d7cc883d2a5035a65207129ee",
+            "reference": "56ee81e44600ca4d7cc883d2a5035a65207129ee",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.0"
+        },
+        "time": "2014-08-26 10:00:33",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "IronCore.class.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Alexander S",
+                "email": "alexander@iron.io",
+                "homepage": "http://iron.io",
+                "role": "Developer"
+            },
+            {
+                "name": "Iron.io",
+                "email": "support@iron.io",
+                "homepage": "http://iron.io",
+                "role": "Developer"
+            }
+        ],
+        "description": "Collection of common functions for all iron.io client libraries",
+        "homepage": "http://github.com/iron-io/iron_core_php",
+        "keywords": [
+            "iron",
+            "iron_core"
+        ]
+    },
+    {
+        "name": "iron-io/iron_mq",
+        "version": "1.5.1",
+        "version_normalized": "1.5.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/iron-io/iron_mq_php.git",
+            "reference": "82dde27337801a914a5ac88cd5f1ba7739f85f19"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/iron-io/iron_mq_php/zipball/82dde27337801a914a5ac88cd5f1ba7739f85f19",
+            "reference": "82dde27337801a914a5ac88cd5f1ba7739f85f19",
+            "shasum": ""
+        },
+        "require": {
+            "iron-io/iron_core": "*",
+            "php": ">=5.2.0"
+        },
+        "time": "2014-02-19 14:02:39",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "IronMQ.class.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Alexander S",
+                "email": "alexander@iron.io",
+                "homepage": "http://iron.io",
+                "role": "Developer"
+            }
+        ],
+        "description": "Client binding for IronMQ (hosted message queue)",
+        "homepage": "http://github.com/iron-io/iron_mq_php",
+        "keywords": [
+            "MQ",
+            "iron",
+            "iron_mq"
         ]
     }
 ]

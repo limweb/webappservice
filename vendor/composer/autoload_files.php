@@ -8,5 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     $vendorDir . '/illuminate/support/helpers.php',
     $vendorDir . '/ircmaxell/password-compat/lib/password.php',
+    $vendorDir . '/iron-io/iron_mq/IronMQ.class.php',
     $vendorDir . '/redbeanphp/rb.php',
 );
