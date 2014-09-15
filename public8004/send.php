@@ -1,0 +1,27 @@
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
+use PhpAmqpLib\Connection\AMQPConnection;
+use PhpAmqpLib\Message\AMQPMessage;
+
+$connection = new AMQPConnection('localhost', 5672, 'guest', 'guest');
+$channel = $connection->channel();
+
+$o = new stdClass();
+$o->name = 'tlen';
+$o->time = time();
+$o->uid = rand();
+
+$channel->queue_declare('hello', false, false, false, false);
+$rand = rand();
+// $msg = new AMQPMessage('Hello World!'.$rand);
+$msg = new AMQPMessage(json_encode($o) );
+$channel->basic_publish($msg, '', 'hello');
+
+echo " [x] Sent 'Hello World!' $rand \n";
+
+$channel->close();
+$connection->close();
+
+?>
+
