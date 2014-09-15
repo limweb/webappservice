@@ -45,7 +45,6 @@ class User extends Eloquent {
 		return $this->hasMany('post');
 	}
 
-
 }
 User::observe(new PostObserver);
 // User::observe(new UserObserver);
