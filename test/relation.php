@@ -27,13 +27,13 @@ require __DIR__.'/../app/config/database.php';
 // $users = DB::connection('sqlite')->table('users')->get();
 // foreach ($users as $user)
 // {
-//     // var_dump($user);
+    // var_dump($user);
 //     echo json_encode($user),'<br>';
 // }
 
 // $rs = User::on('sqlite')->get()->toArray();
-$rs = User::get()->toArray();
-var_dump($rs);
+// $rs = User::get()->toArray();
+// var_dump($rs);
 
 
 // $user = DB::table('users')->where('name', 'Bob')->first();
@@ -127,6 +127,12 @@ var_dump($rs);
 // {
 //     var_dump($user->name);
 // }
+// $rs = User::all()->toArray();
+// $rs = User::find(2);
+// $rs->address;
+// $rs->groups;
+
+// var_dump($rs->toArray());
 
 // $user = User::find(1);
 // $user->address = $user->address()->get()->toArray();
