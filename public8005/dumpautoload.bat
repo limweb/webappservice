@@ -1,0 +1,2 @@
+@echo Dumpautoload
+@composer dumpautoload
