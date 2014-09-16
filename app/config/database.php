@@ -141,8 +141,8 @@ $onnections = array (
 		), 
 );
 
-$capsule->addConnection ($onnections['lv4'],'default');
-$capsule->addConnection ($onnections['test'],'test');
+$capsule->addConnection ($onnections['lv4'],'lv4');
+$capsule->addConnection ($onnections['test'],'default');
 $capsule->addConnection ($onnections['sqlite'],'sqlite');
 
 

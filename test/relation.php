@@ -127,12 +127,12 @@ require __DIR__.'/../app/config/database.php';
 // {
 //     var_dump($user->name);
 // }
-// $rs = User::all()->toArray();
-// $rs = User::find(2);
-// $rs->address;
-// $rs->groups;
+ $rs = User::all()->toArray();
+ $rs = User::find(2);
+ $rs->address;
+ $rs->groups;
 
-// var_dump($rs->toArray());
+ var_dump($rs->toArray());
 
 // $user = User::find(1);
 // $user->address = $user->address()->get()->toArray();

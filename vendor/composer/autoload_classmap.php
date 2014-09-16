@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'AMFUtil' => $baseDir . '/app/plugins/AMFUtil.php',
     'Address' => $baseDir . '/app/models/Model.php',
+    'Autocomplete' => $baseDir . '/app/models/Autocomplete.php',
     'CGIF' => $vendorDir . '/mpdf/mpdf/classes/gif.php',
     'CGIFCOLORTABLE' => $vendorDir . '/mpdf/mpdf/classes/gif.php',
     'CGIFFILEHEADER' => $vendorDir . '/mpdf/mpdf/classes/gif.php',
